@@ -1,0 +1,23 @@
+1. Pick a word between 5-12 characters randomly
+  -random(1,10000) if 5-12 pick else random again
+
+2. Initialize blank spaces to start game display
+  -word.length create new array
+  -IF i do hangman properly create visuals
+
+3. Game logic to update correct letter and remove a life for incorrect letter.
+  -if word contains guess update empty array else remove life update incorrect list
+
+4. Make sure game loss after 6 lives
+  -Game logic will update loss number 
+  -if loss number == 6 end
+
+5. Serialization => save to file
+  -Look back into json serialization
+  -serialize game instance into json
+  -do i need to serialize all files or just game?
+
+6. Game start => load from file or start new
+  -If start new go through above steps
+  -If load from file, deserialize and reinstate game class
+  
