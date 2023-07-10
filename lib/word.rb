@@ -2,8 +2,8 @@
 
 # select word from file and set up the blanks and key
 module WordSetup
-  def select_word(file)
-    contents = File.open(file)
+  def select_word
+    contents = File.open('10000_word_dictionary.txt')
 
     lines = contents.readlines.map do |word|
       word = word.chomp
