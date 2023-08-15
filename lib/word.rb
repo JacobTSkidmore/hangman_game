@@ -1,7 +1,17 @@
 # frozen_string_literal: true
 
 # select word from file and set up the blanks and key
-module WordSetup
+class Word
+  attr_reader :blank_array, :key_array
+
+  def initialize
+    @word = select_word
+    @blank_array = blanks(@word)
+    @key_array = key(@word)
+  end
+
+  private
+
   def select_word
     contents = File.open('10000_word_dictionary.txt')
 
@@ -20,6 +30,6 @@ module WordSetup
   end
 
   def key(word)
-    word.split
+    word.split('')
   end
 end
